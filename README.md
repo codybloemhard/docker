@@ -1,6 +1,10 @@
 # docker
 Just some docker related stuff for myself.
 
+## setup
+To install on Artix OpenRC (non systemd needs extra package): `sudo pacman -S docker docker-openrc`.
+Run daemon: `sudo rc-service docker start`.
+
 ## haskell-devenv
 Development environment for haskell with Z3 theorem prover.
 The haskell bindings to Z3 are best used with version 4.8.x.

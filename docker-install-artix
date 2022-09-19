@@ -1,0 +1,2 @@
+#!/bin/sh
+sudo pacman -S docker docker-openrc
