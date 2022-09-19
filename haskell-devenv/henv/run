@@ -1,0 +1,5 @@
+#!/bin/sh
+sudo docker run -it \
+    -v $(pwd):/project:ro \
+    -v $(pwd)/dist-newstyle:/project/dist-newstyle \
+    --rm henv fish \
