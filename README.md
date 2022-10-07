@@ -15,5 +15,12 @@ To make the versions match, I took the Haskell Docker file [https://hackage.hask
 From that container I build the `henv` container which is the Haskell development environment.
 It takes the source as read-only so you run the container, leave it open, edit the code outside of the container and compile inside.
 The container is made for you to not have to install any Haskell stuff on your host machine.
+### Cabal project
 Run the container, `cabal init` to make the project, `cabal install` to install Z3 into the project.
 `cabal install` needs to be run every time you startup the container, until you init a project and move  the files inside the container so you can install once on build.
+### Just using GHCI
+Put your code in `code`.
+Clone `https://github.com/wooshrow/gclparser` into `gclparser` (replacing this dir not clone in this dir).
+When the container is run, both z3 and gclparser should work.
+They do not show up in `ghc-pkg list` nor in `cabal list --installed` but it works (fuck you haskell toolchain).
+
